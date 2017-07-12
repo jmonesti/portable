@@ -1,0 +1,8 @@
+#include "PortableTypes.h"
+#include "PortableFunctions.h"
+#include "PortableDll.h"
+#include "PortableMutex.h"
+#include "PortableSemaphore.h"
+#include "PortableThread.h"
+#include "PortableProcess.h"
+#include "PortableSharedMemory.h"
