@@ -55,38 +55,33 @@ A set of `typedef` and `#define` intended to provide portability across Linux / 
 
    - Example :
 ```
-       sint64 x = -33;
-       printf( "Variable " STRING_CFORMAT("-4")
-               "at "       POINTER_CFORMAT("")
-               " = "       XINT64_CFORMAT("016")
-               " : "       SINT64_CFORMAT("")
-               "\n",
-               "x", &x, x );
+sint64 x = -33;
+printf( "Variable " STRING_CFORMAT("-4")
+             "at "       POINTER_CFORMAT("")
+             " = "       XINT64_CFORMAT("016")
+             " : "       SINT64_CFORMAT("")
+             "\n",
+             "x", &x, x );
 ```
-
-      Will be developped for Windows as:
-
+Will be developped for Windows as:
 ```
-       unsigned __int64 x;
-       printf( "Variable " "%-4s"
-               "at "       "0x%x"
-               " = "       "0x%016I64x"
-               " : "       "%+d"
-               "\n",
-               "x", &x, x, x );
+unsigned __int64 x;
+printf( "Variable " "%-4s"
+             "at "       "0x%x"
+             " = "       "0x%016I64x"
+             " : "       "%+d"
+             "\n",
+             "x", &x, x, x );
 ```
-
-      and for Linux systems as:
-      
+and for Linux systems as:    
 ```
-
-       unsigned long long x;
-       printf( "Variable " "%-4s"
-               "at "       "%p"
-               " = "       "0x%016llx"
-               " : "       "%+d"
-               "\n",
-               "x", &x, x, x );
+unsigned long long x;
+printf( "Variable " "%-4s"
+             "at "       "%p"
+             " = "       "0x%016llx"
+             " : "       "%+d"
+             "\n",
+             "x", &x, x, x );
 ```
 
 ## About PortableFunctions.h
