@@ -19,11 +19,13 @@ A set of `typedef` and `#define` intended to provide portability across Linux / 
 
    - `SINT8_MAX`, `SINT16_MAX`, `SINT32_MAX` and `SINT64_MAX`
 
-3. OS-retargetted constant setting (mainly point about 64 bits constants)
+3. Retargetted constant setting (mainly point about 64 bits constants)
 
-   - `SINT8_C(x)`, `SINT16_C(x)`, `SINT32_C(x)` and `SINT64_C(x)` to define 8, 16, 32 and 64 bits signed constants
+   - `SINT8_C(x)`, `SINT16_C(x)`, `SINT32_C(x)` and `SINT64_C(x)`
+   define 8, 16, 32 and 64 bits signed constants
 
-   - `UINT8_C(x)`, `UINT16_C(x)`, `UINT32_C(x)` and `UINT64_C(x)` to define 8, 16, 32 and 64 bits unsigned constants
+   - `UINT8_C(x)`, `UINT16_C(x)`, `UINT32_C(x)` and `UINT64_C(x)`
+   define 8, 16, 32 and 64 bits unsigned constants
 
    - Example :
 
@@ -37,21 +39,28 @@ A set of `typedef` and `#define` intended to provide portability across Linux / 
 
        `unsigned long long int x = 0xDDEEAADDBBEEEEFFULL;`
 
-4. definition of macros to hide OS differences about printf( "%" ) format specifications.
+4. definition of macros to hide differences about printf( "%" ) format specifications.
 
-   - `SINT_CFORMAT(f)`, `SINT8_CFORMAT(f)`, `SINT16_CFORMAT(f)`, `SINT32_CFORMAT(f)` and `SINT64_CFORMAT(f)` to print default, 8, 16, 32 and 64 bits signed integers as decimal signed values with sign prefix.
+   - `SINT_CFORMAT(f)`, `SINT8_CFORMAT(f)`, `SINT16_CFORMAT(f)`, `SINT32_CFORMAT(f)` and `SINT64_CFORMAT(f)`
+   print default, 8, 16, 32 and 64 bits signed integers as decimal signed values with sign prefix.
 
-   - `UINT_CFORMAT(f)`, `UINT8_CFORMAT(f)`, `UINT16_CFORMAT(f)`, `UINT32_CFORMAT(f)` and `UINT64_CFORMAT(f)` to print default, 8, 16, 32 and 64 bits unsigned integers as decimal unsigned values (no prefix).
+   - `UINT_CFORMAT(f)`, `UINT8_CFORMAT(f)`, `UINT16_CFORMAT(f)`, `UINT32_CFORMAT(f)` and `UINT64_CFORMAT(f)`
+   print default, 8, 16, 32 and 64 bits unsigned integers as decimal unsigned values (no prefix).
 
-   - `XINT_CFORMAT(f)`, `XINT8_CFORMAT(f)`, `XINT16_CFORMAT(f)`, `XINT32_CFORMAT(f)` and `XINT64_CFORMAT(f)` to print default, 8, 16, 32 and 64 bits integers in hexadecimal with "0x" prefix.
+   - `XINT_CFORMAT(f)`, `XINT8_CFORMAT(f)`, `XINT16_CFORMAT(f)`, `XINT32_CFORMAT(f)` and `XINT64_CFORMAT(f)`
+   print default, 8, 16, 32 and 64 bits integers in hexadecimal with "0x" prefix.
 
-   - `OINT_CFORMAT(f)`, `OINT8_CFORMAT(f)`, `OINT16_CFORMAT(f)`, `OINT32_CFORMAT(f)` and `OINT64_CFORMAT(f)` to print default, 8, 16, 32 and 64 bits integers in octal with "0" prefix.
+   - `OINT_CFORMAT(f)`, `OINT8_CFORMAT(f)`, `OINT16_CFORMAT(f)`, `OINT32_CFORMAT(f)` and `OINT64_CFORMAT(f)`
+   print default, 8, 16, 32 and 64 bits integers in octal with "0" prefix.
 
-   - `INT_CFORMAT(f)`, `INT8_CFORMAT(f)`, `INT16_CFORMAT(f)`, `INT32_CFORMAT(f)` and `INT64_CFORMAT(f)` to print default, 8, 16, 32 and 64 bits integers as decimal values with sign prefix when negative only.
+   - `INT_CFORMAT(f)`, `INT8_CFORMAT(f)`, `INT16_CFORMAT(f)`, `INT32_CFORMAT(f)` and `INT64_CFORMAT(f)`
+   print default, 8, 16, 32 and 64 bits integers as decimal values with sign prefix when negative only.
 
-   - `STRING_CFORMAT(f)` to print zero-ended 8-bits character strings.
+   - `STRING_CFORMAT(f)`
+   print zero-ended 8-bits character strings.
 
-   - `POINTER_CFORMAT(f)` to print host pointer values.
+   - `POINTER_CFORMAT(f)`
+   print host pointer values.
 
    - Example :
 ```
