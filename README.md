@@ -55,7 +55,6 @@ A set of `typedef` and `#define` intended to provide portability across Linux / 
 
    - Example :
 ```
-
        sint64 x = -33;
        printf( "Variable " STRING_CFORMAT("-4")
                "at "       POINTER_CFORMAT("")
@@ -64,9 +63,8 @@ A set of `typedef` and `#define` intended to provide portability across Linux / 
                "\n",
                "x", &x, x );
 ```
-     Will be developped for Windows as:
+      Will be developped for Windows as:
 ```
-
        unsigned __int64 x;
        printf( "Variable " "%-4s"
                "at "       "0x%x"
@@ -75,8 +73,7 @@ A set of `typedef` and `#define` intended to provide portability across Linux / 
                "\n",
                "x", &x, x, x );
 ```
-
-     and for Linux systems as:
+      and for Linux systems as:
 ```
 
        unsigned long long x;
@@ -104,7 +101,6 @@ A portable API for explicitly loading shared libraries.
 
 ### Load Library
 ```
-
     PTBL_DLL_OPEN( _ptbl_dll_handle_, _ptbl_name_ )
     - explicit load the DLL/shared library
     - modify _ptbl_dll_handle_
@@ -113,7 +109,6 @@ A portable API for explicitly loading shared libraries.
 
 ### Retrieve Symbol
 ```
-
     PTBL_DLL_GET_SYMBOL( _ptbl_dll_handle_, _ptbl_pointer_, _ptbl_name_ )
     - get symbol pointer( void* typed )
     - modify _ptbl_pointer_
@@ -121,7 +116,6 @@ A portable API for explicitly loading shared libraries.
 ```
 
 ```
-
     PTBL_DLL_GET_TYPED_SYMBOL( _ptbl_dll_handle_, _ptbl_pointer_, _ptbl_name_, _ptbl_type_ )
     - get symbol pointer with recast to _ptbl_type_
     - modify _ptbl_pointer_
@@ -130,7 +124,6 @@ A portable API for explicitly loading shared libraries.
 
 ### Unload Library
 ```
-
     PTBL_DLL_CLOSE( _ptbl_dll_handle_ )
     - unload the DLL/shared library
     - return 0 if OK
@@ -138,7 +131,6 @@ A portable API for explicitly loading shared libraries.
 
 ### Error Handling
 ```
-
     PTBL_DLL_GET_ERROR( _ptbl_msg_ )
     - get latest error message
     - modify _ptbl_msg_ character pointer
