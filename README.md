@@ -63,7 +63,9 @@ A set of `typedef` and `#define` intended to provide portability across Linux / 
                "\n",
                "x", &x, x );
 ```
+
       Will be developped for Windows as:
+
 ```
        unsigned __int64 x;
        printf( "Variable " "%-4s"
@@ -73,7 +75,9 @@ A set of `typedef` and `#define` intended to provide portability across Linux / 
                "\n",
                "x", &x, x, x );
 ```
+
       and for Linux systems as:
+      
 ```
 
        unsigned long long x;
